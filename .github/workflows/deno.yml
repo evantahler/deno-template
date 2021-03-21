@@ -27,7 +27,7 @@ jobs:
         with:
           deno-version: "v1.x"
 
-      - name: Run Tests
+      - name: Run Linter
         run: deno lint --unstable
 
   test:
