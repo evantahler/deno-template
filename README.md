@@ -1,4 +1,4 @@
-# Deno Hero
+# Deno Template
 
 ## Running
 
@@ -21,3 +21,4 @@ then
 ## Notes
 
 - We use Import Maps
+- VSCode needs to opt-into deno (so it knows it's not JS/TS)
