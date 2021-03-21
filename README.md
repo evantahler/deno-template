@@ -12,6 +12,12 @@ then
 ./bin/start
 ```
 
+## Testing
+
+```
+./bin/test
+```
+
 ## Notes
 
 - We use Import Maps

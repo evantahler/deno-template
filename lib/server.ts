@@ -1,18 +1,11 @@
-import { serve } from "http/server.ts";
-import "dotenv/load.ts";
+import { Application } from "oak/mod.ts";
+import { denoEnv } from "./env.ts";
 
-const hostname = Deno.env.get("BIND");
-const port = Number(Deno.env.get("PORT"));
+export const app = new Application();
 
-export const server = serve({ hostname, port });
+app.use((ctx) => {
+  if (denoEnv() !== "test") console.log(`request from ${ctx.request.ip}`);
 
-console.log(
-  `HTTP webserver running.  Access it at:  http://${hostname}:${port}`
-);
-
-for await (const request of server) {
-  let bodyContent = "Your user-agent is:\n\n";
-  bodyContent += request.headers.get("user-agent") || "Unknown";
-
-  request.respond({ status: 200, body: bodyContent });
-}
+  const payload = { message: "Hello World" };
+  ctx.response.body = JSON.stringify(payload);
+});
