@@ -1,5 +1,7 @@
 # Deno Template
 
+[![Test](https://github.com/evantahler/deno-template/actions/workflows/deno.yml/badge.svg)](https://github.com/evantahler/deno-template/actions/workflows/deno.yml)
+
 ## Running
 
 ```
