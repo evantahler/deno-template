@@ -20,6 +20,12 @@ then
 ./bin/test
 ```
 
+## Compiling
+
+```
+./bin/compile
+```
+
 ## Notes
 
 - We use Import Maps
