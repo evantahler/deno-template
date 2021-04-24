@@ -14,6 +14,14 @@ then
 ./bin/start
 ```
 
+## Developing
+
+We use [`denon`](https://deno.land/x/denon/denon.ts) to watch for changes and restart while developing
+
+```
+./bin/dev
+```
+
 ## Testing
 
 ```
