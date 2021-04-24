@@ -5,9 +5,11 @@ export function log(ctx: Context) {
   if (denoEnv() === "test") return;
   const responseTime = ctx.response.headers.get("X-Response-Time");
   const parsed = new URL(String(ctx.request.url));
-  const message = `${timeStamp()} - [${ctx.request.method}] ${ctx.request.ip} ${
-    parsed.pathname
-  }${responseTime ? ` (${responseTime})` : ""}`;
+  const message = `${timeStamp()} - [${ctx.request.method}] ${
+    ctx.response.status ? `[${ctx.response.status}]` : ""
+  } ${ctx.request.ip} ${parsed.pathname}${
+    responseTime ? ` (${responseTime})` : ""
+  }`;
   console.log(message);
 }
 

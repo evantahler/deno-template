@@ -1,8 +1,9 @@
 {
   "imports": {
-    "oak/": "https://deno.land/x/oak/",
     "testing/": "https://deno.land/std@0.90.0/testing/",
+    "path/": "https://deno.land/std@0.90.0/path/",
     "async/": "https://deno.land/std@0.90.0/async/",
+    "oak/": "https://deno.land/x/oak/",
     "dotenv/": "https://deno.land/x/dotenv@v2.0.0/"
   }
 }
