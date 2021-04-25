@@ -16,9 +16,9 @@ Deno.test("The server boots", async () => {
   app.listen({ hostname, port, signal }); // do not await
   await delay(sleep);
 
-  const response = await fetch(`http://${hostname}:${port}/`);
+  const response = await fetch(`http://${hostname}:${port}/api/test`);
   const json = await response.json();
-  assertEquals(json.message, "Hello World");
+  assertEquals(json.message, "Hello from the API!");
 
   // shut down the server
   controller.abort();
